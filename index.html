@@ -91,8 +91,8 @@
 	</header>
 	<!-- main -->
 	<main>
+		<!-- carousel with hero -->
 		<section class="max-w-6xl mx-auto px-4 md:px-20 lg:px-12 md:py-8 relative">
-			<!-- carousel with hero -->
 			<div class="carousel w-full">
 				<!-- 1st slide -->
 				<div id="slide1" class="carousel-item relative w-full max-w-6xl mx-auto">
@@ -184,14 +184,115 @@
 				</div>
 			</div>
 			<!-- featured fruit  -->
-			<!-- <div class="max-w-4xl mx-auto px-4 md:px-20 lg:px-12 md:py-8"></div> -->
-			<div class="list-none hidden md:flex justify-center text-center gap-8 bg-white p-10 absolute w-4/6 -bottom-24 left-44">
-				<li><a href="#"><img class="w-32 h-20" src="./images/fruit1.png" alt=""><p>Grape</p></a></li>
-				<li><a href="#"><img class="w-32 h-20" src="./images/fruit2.png" alt=""><p>Orange</p></a></li>
-				<li><a href="#"><img class="w-32 h-20" src="./images/fruit3.png" alt=""><p>Mango</p></a></li>
-				<li><a href="#"><img class="w-32 h-20" src="./images/fruit5.png" alt=""><p>Pomegranate</p></a></li>
-				<li><a href="#"><img class="w-32 h-20" src="./images/fruit4.png" alt=""><p>Strawberry</p></a></li>
+			<div
+				class="list-none hidden md:flex justify-center text-center gap-8 bg-white p-10 absolute w-4/6 -bottom-24 left-44">
+				<li><a href="#"><img class="w-32 h-20" src="./images/fruit1.png" alt="">
+						<p>Grape</p>
+					</a></li>
+				<li><a href="#"><img class="w-32 h-20" src="./images/fruit2.png" alt="">
+						<p>Orange</p>
+					</a></li>
+				<li><a href="#"><img class="w-32 h-20" src="./images/fruit3.png" alt="">
+						<p>Mango</p>
+					</a></li>
+				<li><a href="#"><img class="w-32 h-20" src="./images/fruit5.png" alt="">
+						<p>Pomegranate</p>
+					</a></li>
+				<li><a href="#"><img class="w-32 h-20" src="./images/fruit4.png" alt="">
+						<p>Strawberry</p>
+					</a></li>
 			</div>
+		</section>
+		<!-- deal of the day -->
+		<section class="max-w-6xl mx-auto mt-32 px-4 md:px-20 lg:px-12 md:py-8">
+			<!-- deal about -->
+			<div class="flex justify-between items-center flex-col-reverse md:flex-row">
+				<div class="">
+					<h2 class="text-5xl font-extrabold mb-6">Deal of the day</h2>
+					<p>Contrary to popular belief, is not simply random text. <br>
+						It has roots in a piece of classical Latin literature
+					</p>
+				</div>
+				<!-- count down -->
+				<div class="">
+					<div class="grid grid-flow-col gap-1 text-center auto-cols-max">
+						<div class="flex flex-col">
+							<span class="countdown font-mono text-5xl">
+								<span style="--value:5;"></span>
+							</span>
+							Days
+						</div>
+						<div class="font-mono text-4xl">:</div>
+						<div class="flex flex-col">
+							<span class="countdown font-mono text-5xl">
+								<span style="--value:10;"></span>
+							</span>
+							Hours
+						</div>
+						<div class="font-mono text-4xl">:</div>
+						<div class="flex flex-col">
+							<span class="countdown font-mono text-5xl">
+								<span style="--value:24;"></span>
+							</span>
+							min
+						</div>
+						<div class="font-mono text-4xl">:</div>
+						<div class="flex flex-col">
+							<span class="countdown font-mono text-5xl">
+								<span style="--value:33;"></span>
+							</span>
+							sec
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- deal items -->
+
+			<!-- card -->
+			<div class="card bg-base-100 shadow-xl">
+				<figure class="px-10 pt-10">
+					<img src="./images/fruit6.png" alt="fruits" class="rounded-xl" />
+				</figure>
+				<h3 class="text-center py-10 font-bold border-b-4 ">12.9-18.7 $</h3>
+				<div class="card-body items-center text-center">
+					<h2 class="card-title">Apple</h2>
+					<div class="rating py-8">
+						<input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+						<input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+						<input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+						<input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+						<input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+					</div>
+					<div class="card-actions">
+						<button class="btn" onclick="my_modal_5.showModal()">open modal</button>
+						<dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+							<form method="dialog" class="modal-box">
+								<h3 class="font-bold text-lg">Hello!</h3>
+								<p class="py-4">Press ESC key or click the button below to close</p>
+								<div class="modal-action">
+									<!-- if there is a button in form, it will close the modal -->
+									<button class="btn">Close</button>
+								</div>
+							</form>
+						</dialog>
+					</div>
+				</div>
+			</div>
+
+			<!-- modal -->
+			<!-- Open the modal using ID.showModal() method -->
+			<button class="btn" onclick="my_modal_5.showModal()">open modal</button>
+			<dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+				<form method="dialog" class="modal-box">
+					<h3 class="font-bold text-lg">Hello!</h3>
+					<p class="py-4">Press ESC key or click the button below to close</p>
+					<div class="modal-action">
+						<!-- if there is a button in form, it will close the modal -->
+						<button class="btn">Close</button>
+					</div>
+				</form>
+			</dialog>
+
 		</section>
 	</main>
 </body>
